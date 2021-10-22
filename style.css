@@ -44,6 +44,7 @@
     align-items: center;
     justify-content: flex-end;
     z-index: 10;
+    text-decoration: none;
     
   }
 nav > ul{
@@ -361,4 +362,8 @@ i:hover{
   color: #fff;
   box-shadow: 0 16px 24px 2px rgb(227 28 110 / 40%), 0 6px 30px 5px rgb(227 28 110 / 12%), 0 8px 10px -7px rgb(0 0 0 / 20%);
   
+}
+
+a{
+  text-decoration: none;
 }
