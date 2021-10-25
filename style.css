@@ -7,30 +7,40 @@
     height: 100vh;
     width: 100%;
     background-color: #171123;
-    text-align: center;
     position: relative;
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 30px;
   }
 .name{
     color: white;
-    top: 50%;
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%, -50%);
     font-family: helvetica;
     font-weight: 1000;
     font-size: 3rem;
   }
 .sub-name{
     color: #3498DB;
-    position: absolute;
-    left: 50%;
-    top: 60%;
-    transform: translate(-50%, -50%);
     font-family: calibri;
     font-style: italic;
     font-weight: 10;
     font-size: 2.3rem;
+  }
+  button{
+    padding: 15px;
+    border: 1px solid #fff;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0);
+    font-size: 1.6rem;
+    cursor: pointer;
+    transition: 0.75s ease-in-out;
+  }
+
+  button:hover{
+    color: #171123;
+    background-color: #fff;
+
   }
 #navbar{
     position: fixed;
