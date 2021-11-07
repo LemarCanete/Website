@@ -505,5 +505,8 @@ a{
   .personal{
     top: 55%;
   }
+  .right-profile{
+    bottom: -13px;
 
+  }
 }
