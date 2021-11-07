@@ -4,7 +4,7 @@
     box-sizing: border-box;
   } 
 #welcome-section{
-    height: 100vh;
+    height: 105vh;
     width: 100%;
     background-color: #171123;
     position: relative;
@@ -13,6 +13,7 @@
     align-items: center;
     justify-content: center;
     row-gap: 30px;
+    border-bottom: 1vh solid #2E86C1;
   }
 .name{
     color: white;
@@ -29,17 +30,26 @@
   }
   button{
     padding: 15px;
+    font-size: 1.6rem;
     border: 1px solid #fff;
     color: #fff;
     background-color: rgba(0, 0, 0, 0);
-    font-size: 1.6rem;
     cursor: pointer;
     transition: 0.75s ease-in-out;
+    letter-spacing: 5px;
+    margin-top: 20%;
   }
 
   button:hover{
     color: #171123;
     background-color: #fff;
+  }
+svg{
+  transition: .75s ease-in-out;
+}
+  button:hover > svg{
+    fill: #171123;
+    transform: rotate(90deg);
 
   }
 #navbar{
@@ -93,6 +103,8 @@ nav > ul > li > a:hover{
 .projects-heading{
   text-align: center;
   padding: 4rem 0rem 1.3rem 0rem;
+  font-weight: 800;
+  font-family: Calibri, Arial, sans-serif;
 }
 
 .table{
@@ -104,6 +116,10 @@ nav > ul > li > a:hover{
     align-self: center;
   }
 
+.active{
+  background-color: #e31c6e;
+  border-radius: 20px;
+}
 .table-heading{
   /* width: 52%; */
   justify-content: center;
@@ -128,11 +144,7 @@ nav > ul > li > a:hover{
   text-align: center;
 }
 
-.active{
-  background-color: #e31c6e;
-  color: #fff;
-  border-radius: 10px;
-}
+
 
 h5{
     color: #fff;
@@ -180,12 +192,6 @@ hr{
     font-weight: 10;
     font-size: 1.6rem;
   }
-@media (max-width: 65vw){
-    .sub-head{
-      position: relative;
-      margin-top: 100px;
-    }
-  }
 .line{
     position: relative;
     top: 65%;
@@ -213,8 +219,7 @@ p{
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-evenly;
-    gap: -20px;
-    top: 18em;
+    top: 25em;
 }
 .number{
     display: block;
@@ -241,12 +246,11 @@ i:hover{
     color: gray;
 }
 .bold-font{
-    font-weight: bold;
-    font-size: 1.6rem;
+    font-weight: 800;
 }
 
 #profile{
-    height: 54vh;
+    height: 80vh;
     background-color: #fff;
     display: block;
     font-family: Helvetica;
@@ -256,22 +260,19 @@ i:hover{
   text-align: center;
   padding: 2rem;
   color: #6e6e6e;
-}
+  display: block;
+  margin-top: 50px;
 
-.line{
-    background-color: #2E86C1;
-    height: 1vh;
-    position: -webkit-sticky;
 }
 
 .picture{
   display: block;
-  position: absolute;
-  height: 20em;
+  min-width: .1em;
+  height: 60%;
   border-radius: 20px;
-  float: left;
-  top: 640px;
+  border: 1px solid red;
   left: 10%;
+  margin-top: 5%;
 }
 
 .profile-description-title{
@@ -288,9 +289,10 @@ i:hover{
 } 
 .right-profile{
   display: block;
-  position: absolute;
-  left: 45%;
+  margin-left: 45%;
   text-align: justify;
+  position: relative;
+  bottom: 55%;
 }
 
 .table-grid{
@@ -314,7 +316,10 @@ i:hover{
   /* opacity: 0; */
   /* transform: translateY(400px) scale(0); */
 }
-
+img{
+  position: relative;
+  min-width: 100%;
+}
 .image-div::before{
     position: absolute;
     visibility: hidden;
@@ -376,4 +381,129 @@ i:hover{
 
 a{
   text-decoration: none;
+}
+
+@media (max-width: 1024px) {
+  .profile-description{
+    padding: 0 5% 0 0;
+  }
+  .icons{
+    top: 20em;
+  }
+}
+
+@media (max-width: 812px) {
+  .table-grid{
+    grid-template-columns: repeat(3,auto);
+    grid-template-rows: repeat(auto,2fr);
+  }
+  i{
+    font-size: 1.5em; 
+  }
+  .picture{
+    height: 50%;
+    left: 25%;
+  }
+  .right-profile{
+    margin-left: 0;
+    bottom: -20px;
+  }
+  #profile{
+    height: 130vh;
+  }
+   
+  .profile-description-title{
+    font-size: 20px;
+    padding: 5% 5% 5% 5%;
+  }
+  .profile-description{
+    font-size: 1em;
+    padding: 0 5%;
+  }
+}
+
+@media (max-width: 500px) {
+  nav > ul > li > a{
+    font-size: 1rem;
+  }
+  .name{
+    font-size: 2.5rem;
+  }
+  .sub-name{
+    font-size: 1.8rem;
+  }
+  .picture{
+    height: 50%;
+    left: 10%;
+  }
+  .table-grid{
+    grid-template-columns: repeat(2,auto);
+    grid-template-rows: repeat(auto,2fr);
+  }
+  button{
+    padding: 15px;
+    font-size: 1.5rem;
+  }
+  .contact{
+    height: 150vh;
+  }
+  .icons{
+    justify-content: space-around;
+    gap: 20px;
+    top: 23em;
+  }
+  i{
+    font-size: 1.2em;
+  }
+  .number{
+    display: inline;
+  }
+  .personal{
+    z-index: 1000;
+    font-size: .7em;
+  }
+  
+}
+
+@media (max-width: 375px) {
+  .picture{
+    left: 4%;
+  }
+  .table-grid{
+    grid-template-columns: repeat(1,auto);
+    grid-template-rows: repeat(auto,2fr);
+  }
+  nav > ul{
+    margin-right: 0;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 320px) {
+  nav > ul > li > a{
+    padding: 1.2rem;
+  }
+  .name{
+    font-size: 2rem;
+  }
+  .sub-name{
+    font-size: 1.3rem;
+  }
+  .picture{
+    left: 7%;
+    height: 40%;
+  }
+  button{
+    font-size: 1rem;
+  }
+  #head{
+    font-size: 35px;
+  }
+  .sub-head{
+    font-size: 1.4rem;
+  }
+  .personal{
+    top: 55%;
+  }
+
 }
