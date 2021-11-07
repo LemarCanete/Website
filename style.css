@@ -468,7 +468,7 @@ a{
 @media (max-width: 375px) {
   .picture{
     left: 4%;
-    height: 30%;
+    height: 35%;
   }
   .table-grid{
     grid-template-columns: repeat(1,auto);
